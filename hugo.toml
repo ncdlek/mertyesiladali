@@ -17,32 +17,32 @@ defaultContentLanguageInSubdir = true
   [[menu.main]]
     identifier = "home"
     name = "Ana Sayfa"
-    url = "/"
+    url = ""
     weight = 1
   [[menu.main]]
     identifier = "about"
     name = "Hakkımda"
-    url = "/about/"
+    url = "about/"
     weight = 2
   [[menu.main]]
     identifier = "guides"
     name = "Bilgi Merkezi"
-    url = "/bilgi-merkezi/"
+    url = "bilgi-merkezi/"
     weight = 3
   [[menu.main]]
     identifier = "publications"
     name = "Yayınlar"
-    url = "/yayinlar/"
+    url = "yayinlar/"
     weight = 4
   [[menu.main]]
     identifier = "news"
     name = "Haberler"
-    url = "/haberler/"
+    url = "haberler/"
     weight = 5
   [[menu.main]]
     identifier = "contact"
     name = "İletişim"
-    url = "/contact/"
+    url = "contact/"
     weight = 6
 
 [languages]
@@ -55,32 +55,32 @@ defaultContentLanguageInSubdir = true
       [[languages.tr.menu.main]]
         identifier = "home"
         name = "Ana Sayfa"
-        url = "/"
+        url = ""
         weight = 1
       [[languages.tr.menu.main]]
         identifier = "about"
         name = "Hakkımda"
-        url = "/about/"
+        url = "about/"
         weight = 2
       [[languages.tr.menu.main]]
         identifier = "guides"
         name = "Bilgi Merkezi"
-        url = "/bilgi-merkezi/"
+        url = "bilgi-merkezi/"
         weight = 3
       [[languages.tr.menu.main]]
         identifier = "publications"
         name = "Yayınlar"
-        url = "/yayinlar/"
+        url = "yayinlar/"
         weight = 4
       [[languages.tr.menu.main]]
         identifier = "news"
         name = "Haberler"
-        url = "/haberler/"
+        url = "haberler/"
         weight = 5
       [[languages.tr.menu.main]]
         identifier = "contact"
         name = "İletişim"
-        url = "/contact/"
+        url = "contact/"
         weight = 6
 
   [languages.en]
@@ -92,32 +92,32 @@ defaultContentLanguageInSubdir = true
       [[languages.en.menu.main]]
         identifier = "home"
         name = "Home"
-        url = "/"
+        url = ""
         weight = 1
       [[languages.en.menu.main]]
         identifier = "about"
         name = "About"
-        url = "/about/"
+        url = "about/"
         weight = 2
       [[languages.en.menu.main]]
         identifier = "guides"
         name = "Guides"
-        url = "/guides/"
+        url = "guides/"
         weight = 3
       [[languages.en.menu.main]]
         identifier = "publications"
         name = "Publications"
-        url = "/publications/"
+        url = "publications/"
         weight = 4
       [[languages.en.menu.main]]
         identifier = "news"
         name = "News"
-        url = "/news/"
+        url = "news/"
         weight = 5
       [[languages.en.menu.main]]
         identifier = "contact"
         name = "Contact"
-        url = "/contact/"
+        url = "contact/"
         weight = 6
 
 [markup]

@@ -315,7 +315,7 @@
                     <h5>Hızlı Bağlantılar</h5>
                     <ul class="list-unstyled">
                         {{ range .Site.Menus.main }}
-                        <li><a href="{{ .URL }}" class="text-light">{{ .Name }}</a></li>
+                        <li><a href="{{ .URL | relLangURL }}" class="text-light">{{ .Name }}</a></li>
                         {{ end }}
                     </ul>
                 </div>
