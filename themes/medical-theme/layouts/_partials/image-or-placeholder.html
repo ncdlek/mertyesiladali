@@ -1,0 +1,18 @@
+{{- $src := .src | default "" -}}
+{{- $w := .width | default "800" -}}
+{{- $h := .height | default "500" -}}
+
+{{- if or (eq $src "") (not $src) -}}
+  https://placehold.co/{{ $w }}x{{ $h }}
+{{- else if or (hasPrefix $src "http://") (hasPrefix $src "https://") -}}
+  {{- $src -}}
+{{- else -}}
+  {{- $path := cond (hasPrefix $src "/") (print "static" $src) (print "static/" $src) -}}
+  {{- if fileExists $path -}}
+    {{- $src -}}
+  {{- else -}}
+    https://placehold.co/{{ $w }}x{{ $h }}
+  {{- end -}}
+{{- end -}}
+
+

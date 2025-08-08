@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1800&auto=format&fit=crop');">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <h1 class="display-5 fw-bold mb-1">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+  </div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      {{ range .Pages }}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100">
+          {{ $img := partial "image-or-placeholder.html" (dict "src" .Params.image "width" "800" "height" "500") }}
+          <img src="{{ $img }}" class="card-img-top" alt="{{ .Title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ .Title }}</h5>
+            {{ with .Description }}<p class="card-text">{{ . }}</p>{{ end }}
+            <a href="{{ .RelPermalink }}" class="btn btn-primary"><i class="fas fa-arrow-right me-2"></i>{{ i18n "read_more" | default "Devamını Oku" }}</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+

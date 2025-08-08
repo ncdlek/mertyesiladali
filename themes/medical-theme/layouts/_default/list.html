@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="py-5">
+    <div class="container">
+        <header class="mb-4 text-center">
+            <h1 class="display-5 fw-bold">{{ .Title }}</h1>
+            {{ if .Description }}
+            <p class="lead text-muted">{{ .Description }}</p>
+            {{ end }}
+        </header>
+        <div class="row g-4">
+            {{ range .Pages }}
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100">
+                    {{ $img := partial "image-or-placeholder.html" (dict "src" .Params.image "width" "800" "height" "500") }}
+                    <img src="{{ $img }}" class="card-img-top" alt="{{ .Title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ .Title }}</h5>
+                        {{ if .Description }}
+                            <p class="card-text">{{ .Description }}</p>
+                        {{ else }}
+                            <p class="card-text">{{ .Summary }}</p>
+                        {{ end }}
+                        <a href="{{ .RelPermalink }}" class="btn btn-primary">
+                            <i class="fas fa-arrow-right me-2"></i>{{ i18n "read_more" | default "Devamını Oku" }}
+                        </a>
+                    </div>
+                    {{ if .Date }}
+                    <div class="card-footer text-muted">
+                        <small>
+                            <i class="fas fa-calendar me-1"></i>
+                            {{ .Date.Format "2 January 2006" }}
+                        </small>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}

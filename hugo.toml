@@ -1,0 +1,126 @@
+baseURL = 'https://mertyesiladali.github.io/'
+languageCode = 'tr-tr'
+title = 'Dr. Mert Yeşiladalı - Jinekolog'
+theme = 'medical-theme'
+defaultContentLanguage = 'tr'
+defaultContentLanguageInSubdir = true
+
+[params]
+  description = "Dr. Mert Yeşiladalı - Kadın Hastalıkları ve Doğum Uzmanı"
+  author = "Dr. Mert Yeşiladalı"
+  hospital_url = "https://yeditepehastaneleri.com/doktorlar/mert-yesiladali"
+  email = "mert.yesiladali@yeditepehastaneleri.com"
+  phone = "+90 212 211 40 00"
+  address = "Yeditepe Üniversitesi Hastanesi, İstanbul"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Ana Sayfa"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "Hakkımda"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    identifier = "guides"
+    name = "Bilgi Merkezi"
+    url = "/bilgi-merkezi/"
+    weight = 3
+  [[menu.main]]
+    identifier = "publications"
+    name = "Yayınlar"
+    url = "/yayinlar/"
+    weight = 4
+  [[menu.main]]
+    identifier = "news"
+    name = "Haberler"
+    url = "/haberler/"
+    weight = 5
+  [[menu.main]]
+    identifier = "contact"
+    name = "İletişim"
+    url = "/contact/"
+    weight = 6
+
+[languages]
+  [languages.tr]
+    languageName = "Türkçe"
+    weight = 1
+    title = "Dr. Mert Yeşiladalı - Jinekolog"
+    contentDir = "content"
+    [languages.tr.menu]
+      [[languages.tr.menu.main]]
+        identifier = "home"
+        name = "Ana Sayfa"
+        url = "/"
+        weight = 1
+      [[languages.tr.menu.main]]
+        identifier = "about"
+        name = "Hakkımda"
+        url = "/about/"
+        weight = 2
+      [[languages.tr.menu.main]]
+        identifier = "guides"
+        name = "Bilgi Merkezi"
+        url = "/bilgi-merkezi/"
+        weight = 3
+      [[languages.tr.menu.main]]
+        identifier = "publications"
+        name = "Yayınlar"
+        url = "/yayinlar/"
+        weight = 4
+      [[languages.tr.menu.main]]
+        identifier = "news"
+        name = "Haberler"
+        url = "/haberler/"
+        weight = 5
+      [[languages.tr.menu.main]]
+        identifier = "contact"
+        name = "İletişim"
+        url = "/contact/"
+        weight = 6
+
+  [languages.en]
+    languageName = "English"
+    weight = 2
+    title = "Dr. Mert Yeşiladalı - Gynecologist"
+    contentDir = "content/en"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "home"
+        name = "Home"
+        url = "/"
+        weight = 1
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about/"
+        weight = 2
+      [[languages.en.menu.main]]
+        identifier = "guides"
+        name = "Guides"
+        url = "/guides/"
+        weight = 3
+      [[languages.en.menu.main]]
+        identifier = "publications"
+        name = "Publications"
+        url = "/publications/"
+        weight = 4
+      [[languages.en.menu.main]]
+        identifier = "news"
+        name = "News"
+        url = "/news/"
+        weight = 5
+      [[languages.en.menu.main]]
+        identifier = "contact"
+        name = "Contact"
+        url = "/contact/"
+        weight = 6
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

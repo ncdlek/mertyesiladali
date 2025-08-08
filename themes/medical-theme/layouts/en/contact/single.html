@@ -1,0 +1,93 @@
+{{ define "main" }}
+{{ $hero := partial "image-or-placeholder.html" (dict "src" .Params.image "width" "1600" "height" "500") }}
+<section class="page-hero" style="background-image:url('{{ $hero }}');">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <h1 class="display-5 fw-bold mb-1">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="richtext mb-5">{{ .Content }}</div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h3 class="h5 mb-4">
+                            <i class="fas fa-info-circle text-primary me-2"></i>
+                            {{ i18n "contact_info" | default "Contact Information" }}
+                        </h3>
+                        <div class="contact-info">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                    <i class="fas fa-phone text-primary"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">{{ i18n "phone" | default "Phone" }}</small>
+                                    <strong>{{ .Site.Params.phone | default "+90 212 211 40 00" }}</strong>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                    <i class="fas fa-envelope text-primary"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">{{ i18n "email" | default "Email" }}</small>
+                                    <strong>{{ .Site.Params.email | default "mert.yesiladali@yeditepehastaneleri.com" }}</strong>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-start mb-3">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3 mt-1">
+                                    <i class="fas fa-map-marker-alt text-primary"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">{{ i18n "address" | default "Address" }}</small>
+                                    <strong>{{ .Site.Params.address | default "Yeditepe University Hospital, Istanbul" }}</strong>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary bg-opacity-10 rounded-circle p-2 me-3">
+                                    <i class="fas fa-clock text-primary"></i>
+                                </div>
+                                <div>
+                                    <small class="text-muted d-block">{{ i18n "working_hours" | default "Working Hours" }}</small>
+                                    <strong>{{ i18n "working_hours_detail" | default "Mon-Sat: 09:00-17:00" }}</strong>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <a href="{{ .Site.Params.hospital_url | default "https://yeditepehastaneleri.com" }}" class="btn btn-primary w-100" target="_blank">
+                                <i class="fas fa-external-link-alt me-2"></i>{{ i18n "hospital_page" | default "Hospital Website" }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <h3 class="h4 mb-4">
+                            <i class="fas fa-map-marked-alt text-primary me-2"></i>
+                            {{ i18n "location" | default "Location" }}
+                        </h3>
+                        <div class="ratio ratio-16x9 rounded overflow-hidden">
+                            <iframe
+                                src="https://www.google.com/maps?q=Yeditepe%20%C3%9Cniversitesi%20Hastanesi&output=embed"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                style="border:0;">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

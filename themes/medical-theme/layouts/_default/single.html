@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ $hero := partial "image-or-placeholder.html" (dict "src" .Params.image "width" "1600" "height" "500") }}
+<section class="page-hero" style="background-image:url('{{ $hero }}');">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <h1 class="display-5 fw-bold mb-1">{{ .Title }}</h1>
+    {{ if .Date }}<p class="text-white-50 mb-0"><i class="fas fa-calendar me-2"></i>{{ .Date.Format "2 January 2006" }}</p>{{ end }}
+  </div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 col-xl-8">
+        <article class="richtext">
+          {{ .Content }}
+        </article>
+        {{ if .Params.tags }}
+        <footer class="mt-5">
+          <div class="d-flex flex-wrap gap-2">
+            {{ range .Params.tags }}
+              <span class="badge bg-primary">{{ . }}</span>
+            {{ end }}
+          </div>
+        </footer>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

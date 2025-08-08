@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1800&auto=format&fit=crop');">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <h1 class="display-5 fw-bold mb-1">{{ .Title }}</h1>
+  </div>
+</section>
+<section class="py-5">
+  <div class="container">
+    <div class="row g-2">
+      {{ range .Data.Terms.Alphabetical }}
+        <div class="col-sm-6 col-lg-4">
+          <a class="card p-3 text-decoration-none h-100" href="{{ .Page.RelPermalink }}">
+            <strong>{{ .Page.Title }}</strong>
+            <span class="text-muted small"> ({{ .Count }})</span>
+          </a>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+

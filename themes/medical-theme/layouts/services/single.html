@@ -1,0 +1,43 @@
+{{ define "main" }}
+<section class="page-hero" style="background-image:url('https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1800&auto=format&fit=crop');">
+  <div class="overlay"></div>
+  <div class="container position-relative">
+    <h1 class="display-5 fw-bold mb-1">{{ .Title }}</h1>
+    {{ with .Description }}<p class="lead mb-0">{{ . }}</p>{{ end }}
+  </div>
+</section>
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <article class="richtext">
+                    {{ .Content }}
+                </article>
+            </div>
+            <div class="col-lg-4">
+                <div class="card p-3 mb-3">
+                    <h5 class="mb-2"><i class="fas fa-info-circle me-2"></i>{{ i18n "more_info" | default "Bilgi ve Randevu" }}</h5>
+                    <div class="small text-muted mb-2">{{ i18n "call_for_details" | default "Detaylı bilgi ve randevu için" }}</div>
+                    <div class="mb-2"><i class="fas fa-phone"></i> {{ .Site.Params.phone }}</div>
+                    <div class="mb-2"><i class="fas fa-envelope"></i> {{ .Site.Params.email }}</div>
+                    <a href="{{ .Site.Params.hospital_url }}" target="_blank" class="btn btn-primary btn-sm mt-2"><i class="fas fa-calendar-check me-2"></i>{{ i18n "appointment" | default "Randevu Al" }}</a>
+                </div>
+                <div class="card">
+                    {{ $img := partial "image-or-placeholder.html" (dict "src" .Params.image "width" "800" "height" "500") }}
+                    <img src="{{ $img }}" class="card-img-top" alt="{{ .Title }}"/>
+                </div>
+                <div class="card p-3 mt-3">
+                    <h6 class="mb-3"><i class="fas fa-list me-2"></i>{{ i18n "other_services" | default "Diğer Hizmetler" }}</h6>
+                    <ul class="list-unstyled mb-0">
+                        {{ range where .Site.RegularPages "Section" "services" }}
+                            {{ if ne .RelPermalink $.RelPermalink }}
+                                <li class="mb-2"><a href="{{ .RelPermalink }}" class="text-decoration-none">{{ .Title }}</a></li>
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
