@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sıkça Sorulan Sorular</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <header class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <a href="index.html" class="header-title-link">
+                        <h1>Dr. Öğr. Üyesi Mert Yeşiladalı</h1>
+                    </a>
+                    <p>Üreme Tıbbı, Tüp Bebek ve Kadın Sağlığı Uzmanı</p>
+                    <div class="hero-buttons">
+                        <a href="https://yeditepehastaneleri.com/doktorlar/mert-yesiladali" target="_blank" class="btn btn-primary">Randevu Al</a>
+                        <a href="#contact-section" class="btn btn-secondary">İletişim</a>
+                    </div>
+                </div>
+                <img
+                    src="images/doctor-photo.jpg"
+                    alt="Dr. Mert Yeşiladalı"
+                    class="hero-doctor-photo"
+                />
+            </div>
+        </header>
+
+        <script>
+            // Google Translate integration
+            function doTranslate(lang) {
+                if (!window.googleTranslateElementInit) {
+                    var gt = document.createElement("script");
+                    gt.type = "text/javascript";
+                    gt.src =
+                        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                    document.body.appendChild(gt);
+                    window.googleTranslateElementInit = function () {
+                        new window.google.translate.TranslateElement(
+                            {
+                                pageLanguage: "tr",
+                                includedLanguages: "en,ru,ar",
+                                layout: window.google.translate.TranslateElement
+                                    .InlineLayout.SIMPLE,
+                            },
+                            "google_translate_element",
+                        );
+                        setTimeout(function () {
+                            selectLang(lang);
+                        }, 500);
+                    };
+                } else {
+                    selectLang(lang);
+                }
+            }
+            function selectLang(lang) {
+                var select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                }
+            }
+        </script>
+        <div id="google_translate_element" style="display: none"></div>
+
+        <main class="content">
+            <div class="content-body">
+                <h2>Sıkça Sorulan Sorular</h2>
+
+                <div class="faq-category">
+                    <h3>Genel Jinekoloji</h3>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Yıllık jinekolojik muayene ne sıklıkla yapılmalı?</summary>
+                            <p>Genel olarak, cinsel olarak aktif olan veya 21 yaşını geçmiş her kadının yılda bir kez jinekolojik muayene olması önerilir. Bu muayene, genel sağlık durumunuzun değerlendirilmesi, Pap smear testi gibi taramaların yapılması ve olası sorunların erken teşhisi için kritik öneme sahiptir. Doktorunuz, kişisel sağlık geçmişinize göre size özel bir takip takvimi önerebilir.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Rahim ağzı kanseri taraması hangi yaşta başlamalı?</summary>
+                            <p>Rahim ağzı kanseri taraması (Pap smear testi), genellikle 21 yaşında başlar ve 3 yılda bir tekrarlanır. 30 yaşından sonra, Pap smear testi ile birlikte HPV (İnsan Papilloma Virüsü) testi de yapılırsa ve sonuçlar normalse, tarama aralığı 5 yıla çıkarılabilir. Risk faktörlerinize göre doktorunuz farklı bir program önerebilir.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Adet düzensizliği hangi durumlarda ciddiye alınmalı?</summary>
+                            <p>Adet döngüsündeki hafif değişiklikler normal olabilir. Ancak, adetlerin aniden çok düzensizleşmesi, çok ağrılı veya aşırı kanamalı geçmesi, 21 günden kısa veya 35 günden uzun sürmesi ya da adet kanamaları arasında lekelenme olması durumunda bir uzmana danışmak önemlidir. Bu durumlar, altta yatan bir sağlık sorununun belirtisi olabilir.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Üreme Tıbbı ve Tüp Bebek</h3>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Tüp bebek tedavisine başlamadan önce hangi testler yapılır?</summary>
+                            <p>Tedaviye başlamadan önce çiftlerin detaylı bir değerlendirmesi yapılır. Kadın için hormon testleri (AMH, FSH, E2), rahim filmi (HSG) ve ultrasonografik inceleme; erkek için ise spermiyogram (sperm analizi) temel testlerdir. Gerekli durumlarda genetik testler veya ek kan tahlilleri de istenebilir.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>PKOS hastaları tüp bebek tedavisinde başarılı olabilir mi?</summary>
+                            <p>Evet, Polikistik Over Sendromu (PKOS) olan hastalar tüp bebek tedavisinde oldukça yüksek başarı oranlarına sahiptir. PKOS, genellikle yumurta sayısının fazla olmasıyla karakterizedir. Doğru tedavi protokolü ve ilaç dozlarının ayarlanması ile sağlıklı embriyolar elde etme ve gebelik şansı yüksektir.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Yumurta dondurma işlemi için ideal yaş nedir?</summary>
+                            <p>Yumurta dondurma işlemi için biyolojik olarak en verimli dönem 35 yaş öncesidir. Özellikle 30'lu yaşların başı, hem yumurta sayısı hem de kalitesi açısından en ideal zaman olarak kabul edilir. Ancak, her yaşta ve durumda kişisel bir değerlendirme ile karar verilmelidir.</p>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3>Dr. Mert Yeşiladalı Hakkında</h3>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Dr. Yeşiladalı’nın uzmanlık alanları nelerdir?</summary>
+                            <p>Dr. Mert Yeşiladalı, başlıca Üreme Tıbbı ve İnfertilite (Kısırlık), Tüp Bebek (IVF) tedavileri, Polikistik Over Sendromu, Endoskopik Cerrahi (Laparoskopi ve Histeroskopi) ve genel Kadın Hastalıkları ve Doğum alanlarında uzmanlaşmıştır.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Yurt dışı eğitim deneyimi var mı?</summary>
+                            <p>Evet, Dr. Yeşiladalı, uzmanlık eğitimi sonrası University College London Hospital’da (İngiltere) tüp bebek ve minimal invaziv cerrahi alanlarında çalışarak uluslararası deneyim kazanmıştır.</p>
+                        </details>
+                    </div>
+                    <div class="faq-item">
+                        <details>
+                            <summary>Hangi hastanelerde hizmet vermektedir?</summary>
+                            <p>Dr. Mert Yeşiladalı, Yeditepe Üniversitesi Kozyatağı Hastanesi'nde hastalarına hizmet vermektedir.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section id="contact-section" class="contact">
+            <h2>İletişim</h2>
+            <p>
+                Email:
+                <a href="mailto:mert.yesiladali@yeditepe.edu.tr"
+                    >mert.yesiladali@yeditepe.edu.tr</a
+                >
+            </p>
+            <p>Telefon: <a href="tel:+902165784000">+90 216 578 40 00</a></p>
+            <p>Adres: Yeditepe Üniversitesi Kozyatağı Hastanesi, İstanbul</p>
+        </section>
+
+        <footer>
+            <p class="footer-disclaimer">
+                Bu sitede yer alan bilgiler, yalnızca bilgilendirme amaçlıdır ve herhangi bir tanı veya tedavi önerisi niteliği taşımaz. Sağlık sorunlarınız için lütfen doktorunuza danışınız.
+            </p>
+            <p>&copy; 2024 Dr. Mert Yeşiladalı. Tüm hakları saklıdır.</p>
+        </footer>
+    </body>
+</html>

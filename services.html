@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Verilen Hizmetler</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <header class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <a href="index.html" class="header-title-link">
+                        <h1>Dr. Öğr. Üyesi Mert Yeşiladalı</h1>
+                    </a>
+                    <p>Üreme Tıbbı, Tüp Bebek ve Kadın Sağlığı Uzmanı</p>
+                    <div class="hero-buttons">
+                        <a href="https://yeditepehastaneleri.com/doktorlar/mert-yesiladali" target="_blank" class="btn btn-primary">Randevu Al</a>
+                        <a href="#contact-section" class="btn btn-secondary">İletişim</a>
+                    </div>
+                </div>
+                <img
+                    src="images/doctor-photo.jpg"
+                    alt="Dr. Mert Yeşiladalı"
+                    class="hero-doctor-photo"
+                />
+            </div>
+        </header>
+
+        <script>
+            // Google Translate integration
+            function doTranslate(lang) {
+                if (!window.googleTranslateElementInit) {
+                    var gt = document.createElement("script");
+                    gt.type = "text/javascript";
+                    gt.src =
+                        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                    document.body.appendChild(gt);
+                    window.googleTranslateElementInit = function () {
+                        new window.google.translate.TranslateElement(
+                            {
+                                pageLanguage: "tr",
+                                includedLanguages: "en,ru,ar",
+                                layout: window.google.translate.TranslateElement
+                                    .InlineLayout.SIMPLE,
+                            },
+                            "google_translate_element",
+                        );
+                        setTimeout(function () {
+                            selectLang(lang);
+                        }, 500);
+                    };
+                } else {
+                    selectLang(lang);
+                }
+            }
+            function selectLang(lang) {
+                var select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                }
+            }
+        </script>
+        <div id="google_translate_element" style="display: none"></div>
+
+        <main class="content">
+            <div class="content-body">
+                <h2>Verilen Hizmetler</h2>
+                <div class="service-item">
+                    <h3>Tüp Bebek (IVF) Tedavileri</h3>
+                    <p>Kişiye özel tedavi protokolleri ile en güncel yardımcı üreme teknikleri kullanılarak çiftlerin çocuk sahibi olma hayallerini gerçekleştirmeye yönelik kapsamlı tedavi süreçleri. Mikroenjeksiyon (ICSI), embriyo dondurma ve genetik tarama gibi modern yöntemler uygulanmaktadır.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Üreme Endokrinolojisi ve Hormon Bozuklukları</h3>
+                    <p>İnfertiliteye (kısırlık) neden olabilen tiroid hastalıkları, prolaktin yüksekliği gibi hormonal düzensizliklerin tanı ve tedavisi. Sağlıklı bir üreme fonksiyonu için hormonal dengenin sağlanması hedeflenir.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Polikistik Over Sendromu (PKOS) Tedavisi</h3>
+                    <p>Adet düzensizliği, aşırı tüylenme ve kısırlık gibi belirtilerle ortaya çıkan Polikistik Over Sendromu için yaşam tarzı önerileri, medikal tedaviler ve doğurganlığı artırmaya yönelik kişiselleştirilmiş yaklaşımlar sunulmaktadır.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Endoskopik (Laparoskopik & Histeroskopik) Cerrahiler</h3>
+                    <p>Minimal invaziv cerrahi yöntemlerle miyom, endometriozis (çikolata kisti), dış gebelik ve rahim içi patolojilerin tedavisi. Bu yöntemler daha az ağrı, daha hızlı iyileşme süreci ve daha iyi kozmetik sonuçlar sağlar.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Gebelik Takibi ve Doğum</h3>
+                    <p>Anne ve bebek sağlığını ön planda tutan, modern tıbbın gerektirdiği tüm tarama testleri ve ultrasonografileri içeren kapsamlı gebelik takip hizmeti. Hem normal hem de sezaryen doğum seçenekleri güvenle yönetilmektedir.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Miyom ve Kist Tedavisi</h3>
+                    <p>Rahimde veya yumurtalıklarda saptanan miyom ve kistlerin, hastanın durumuna ve çocuk isteğine göre medikal (ilaçla) veya cerrahi (laparoskopik/açık) yöntemlerle etkin bir şekilde tedavisi.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Genital Estetik Uygulamaları</h3>
+                    <p>Labioplasti, vajinoplasti gibi hem fonksiyonel hem de estetik kaygıları gidermeye yönelik modern cerrahi uygulamalar. Kişinin özgüvenini ve yaşam kalitesini artırmayı hedefler.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Menopoz ve Adet Düzensizlikleri Tedavisi</h3>
+                    <p>Menopoz dönemine bağlı sıcak basması, kemik erimesi riski gibi şikayetlerin yönetimi ve her yaştaki adet düzensizliklerinin altında yatan nedenlerin bulunarak uygun tedavi yöntemlerinin belirlenmesi.</p>
+                </div>
+            </div>
+        </main>
+
+        <section id="contact-section" class="contact">
+            <h2>İletişim</h2>
+            <p>
+                Email:
+                <a href="mailto:mert.yesiladali@yeditepe.edu.tr"
+                    >mert.yesiladali@yeditepe.edu.tr</a
+                >
+            </p>
+            <p>Telefon: <a href="tel:+902165784000">+90 216 578 40 00</a></p>
+            <p>Adres: Yeditepe Üniversitesi Kozyatağı Hastanesi, İstanbul</p>
+        </section>
+
+        <footer>
+            <p class="footer-disclaimer">
+                Bu sitede yer alan bilgiler, yalnızca bilgilendirme amaçlıdır ve herhangi bir tanı veya tedavi önerisi niteliği taşımaz. Sağlık sorunlarınız için lütfen doktorunuza danışınız.
+            </p>
+            <p>&copy; 2024 Dr. Mert Yeşiladalı. Tüm hakları saklıdır.</p>
+        </footer>
+    </body>
+</html>

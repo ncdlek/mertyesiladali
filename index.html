@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dr. Öğr. Üyesi Mert Yeşiladalı</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <script src="scripts.js" defer></script>
+    </head>
+    <body>
+        <header class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <a href="index.html" class="header-title-link">
+                        <h1>Dr. Öğr. Üyesi Mert Yeşiladalı</h1>
+                    </a>
+                    <p>Üreme Tıbbı, Tüp Bebek ve Kadın Sağlığı Uzmanı</p>
+                    <div class="hero-buttons">
+                        <a href="https://yeditepehastaneleri.com/doktorlar/mert-yesiladali" target="_blank" class="btn btn-primary">Randevu Al</a>
+                        <a href="#contact-section" class="btn btn-secondary">İletişim</a>
+                    </div>
+                </div>
+                <img
+                    src="images/doctor-photo.jpg"
+                    alt="Dr. Mert Yeşiladalı"
+                    class="hero-doctor-photo"
+                />
+            </div>
+        </header>
+
+        <script>
+            // Google Translate integration
+            function doTranslate(lang) {
+                if (!window.googleTranslateElementInit) {
+                    var gt = document.createElement("script");
+                    gt.type = "text/javascript";
+                    gt.src =
+                        "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                    document.body.appendChild(gt);
+                    window.googleTranslateElementInit = function () {
+                        new window.google.translate.TranslateElement(
+                            {
+                                pageLanguage: "tr",
+                                includedLanguages: "en,ru,ar",
+                                layout: window.google.translate.TranslateElement
+                                    .InlineLayout.SIMPLE,
+                            },
+                            "google_translate_element",
+                        );
+                        setTimeout(function () {
+                            selectLang(lang);
+                        }, 500);
+                    };
+                } else {
+                    selectLang(lang);
+                }
+            }
+            function selectLang(lang) {
+                var select = document.querySelector(".goog-te-combo");
+                if (select) {
+                    select.value = lang;
+                    select.dispatchEvent(new Event("change"));
+                }
+            }
+        </script>
+        <div id="google_translate_element" style="display: none"></div>
+
+        <section class="about">
+            <div>
+                <h2>Hakkında</h2>
+                <p>
+                    Dr. Mert Yeşiladalı, Hacettepe Üniversitesi Tıp Fakültesi
+                    mezunu olup, Yeditepe Üniversitesi’nde Kadın Hastalıkları ve
+                    Doğum uzmanlık eğitimini tamamlamıştır. Üreme
+                    endokrinolojisi, infertilite ve tüp bebek tedavilerinde
+                    uzman olup, University College London Hospital’da minimal
+                    invaziv cerrahi ve tüp bebek üzerine çalışmıştır.
+                </p>
+            </div>
+        </section>
+
+        <section class="overview-section">
+            <div class="overview-card">
+                <h3>Verilen Hizmetler</h3>
+                <p>Tüp bebek, kadın sağlığı ve üreme tıbbı alanındaki modern tedavi yöntemleri hakkında daha fazla bilgi alın.</p>
+                <a href="services.html" class="btn btn-tertiary">Hizmetleri İncele →</a>
+            </div>
+            <div class="overview-card">
+                <h3>Sıkça Sorulan Sorular</h3>
+                <p>Tedavi süreçleri, randevular ve merak ettiğiniz diğer konular hakkında sıkça sorulan sorulara göz atın.</p>
+                <a href="faq.html" class="btn btn-tertiary">Soruları Görüntüle →</a>
+            </div>
+        </section>
+
+        <section class="videos">
+            <h2>Katıldığı Programlar</h2>
+            <div class="video-grid">
+                <iframe
+                    src="https://www.youtube.com/embed/fY0ESDwZcA0"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+                <iframe
+                    src="https://www.youtube.com/embed/ku98Lj5fNBI"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+                <iframe
+                    src="https://www.youtube.com/embed/azoqlB6URU0"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact">
+            <h2>İletişim</h2>
+            <p>
+                Email:
+                <a href="mailto:mert.yesiladali@yeditepe.edu.tr"
+                    >mert.yesiladali@yeditepe.edu.tr</a
+                >
+            </p>
+            <p>Telefon: <a href="tel:+902165784000">+90 216 578 40 00</a></p>
+            <p>Adres: Yeditepe Üniversitesi Kozyatağı Hastanesi, İstanbul</p>
+        </section>
+
+        <footer>
+            <p class="footer-disclaimer">
+                Bu sitede yer alan bilgiler, yalnızca bilgilendirme amaçlıdır ve herhangi bir tanı veya tedavi önerisi niteliği taşımaz. Sağlık sorunlarınız için lütfen doktorunuza danışınız.
+            </p>
+            <p>&copy; 2024 Dr. Mert Yeşiladalı. Tüm hakları saklıdır.</p>
+        </footer>
+    </body>
+</html>

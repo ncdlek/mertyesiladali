@@ -1,0 +1,292 @@
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background: #fff;
+    color: #333;
+}
+
+/* Updated Hero/Header Section */
+.hero {
+    background-color: #f8f9fa; /* A light grey background */
+    padding: 2rem 4rem; /* Using rem for scalability */
+    min-height: 25vh; /* Reduced height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.header-title-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-text h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #6a4bc4;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #563dab;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #6a4bc4;
+    border-color: #6a4bc4;
+}
+
+.btn-secondary:hover {
+    background-color: #6a4bc4;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.hero-doctor-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-left: 40px;
+}
+
+
+
+/* Overview Section */
+.overview-section {
+    display: flex;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.overview-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.overview-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.overview-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.overview-card p {
+    color: #555;
+    min-height: 60px;
+}
+
+.btn-tertiary {
+    color: #6a4bc4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-tertiary:hover {
+    text-decoration: underline;
+}
+
+/* About, Videos, Contact Sections */
+.about,
+.videos,
+.contact {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    text-align: left;
+}
+
+.doctor-photo {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+}
+
+.videos h2,
+.contact h2,
+.about h2 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.contact a {
+    color: #6a4bc4;
+}
+
+/* Content Body for Services and FAQ pages */
+.content-body {
+    max-width: 900px;
+    margin: 40px auto; /* Adds top/bottom padding and centers horizontally */
+    padding: 20px;
+    background: #fff; /* Ensures a white background for content area */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    line-height: 1.8; /* Improved readability */
+}
+
+.content-body h2,
+.content-body h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.content-body ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+}
+
+.content-body ul li {
+    background: #f9f9f9; /* Light background for list items */
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    font-size: 1.05rem;
+    color: #555;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.service-item {
+    margin-bottom: 2rem;
+}
+
+/* FAQ Accordion Styles */
+.faq-category {
+    margin-bottom: 2.5rem;
+}
+
+.faq-category h3 {
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.faq-item details {
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 1px solid #e9ecef;
+}
+
+.faq-item summary {
+    font-weight: 600;
+    padding: 1rem;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    display: block;
+    color: #495057;
+    transition: background-color 0.2s ease-out;
+}
+
+.faq-item summary:hover {
+    background-color: #e9ecef;
+}
+
+.faq-item summary::after {
+    content: '›';
+    font-size: 1.8rem;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    transition: transform 0.2s ease-out;
+}
+
+details[open] > summary::after {
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.faq-item p {
+    padding: 0 1rem 1rem 1rem;
+    margin: 0;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Hide default arrow */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.footer-disclaimer {
+    font-size: 0.8rem;
+    color: #888;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    line-height: 1.5;
+}
