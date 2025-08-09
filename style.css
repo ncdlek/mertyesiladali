@@ -126,13 +126,24 @@ body {
 }
 
 .btn-tertiary {
-    color: #6a4bc4;
-    font-weight: 600;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: 2px solid #e0d8f5; /* Lighter purple border */
+    color: #6a4bc4;
+    background-color: #f8f5ff; /* Very light purple background */
 }
 
 .btn-tertiary:hover {
-    text-decoration: underline;
+    background-color: #6a4bc4;
+    color: #fff;
+    border-color: #6a4bc4;
+    transform: translateY(-2px);
+    text-decoration: none;
 }
 
 /* About, Videos, Contact Sections */
