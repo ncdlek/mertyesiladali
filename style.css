@@ -19,7 +19,8 @@ body {
 .hero-content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center; /* Center items vertically */
+    gap: 2rem; /* Add space between text/buttons and photo */
     width: 100%;
     max-width: 1100px;
 }
@@ -289,4 +290,67 @@ footer {
     max-width: 800px;
     margin: 0 auto 15px auto;
     line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        order: 1; /* First item */
+    }
+
+    .hero-doctor-photo {
+        order: 2; /* Second item */
+        margin: 20px 0;
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        width: 100%;
+        gap: 1rem; /* Add some space between buttons */
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .overview-section {
+        flex-direction: column;
+        padding: 0 20px;
+        margin: 20px auto;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .about .doctor-photo {
+        margin-bottom: 20px;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .content-body {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .hero, .about, .videos, .contact {
+        padding: 20px;
+    }
 }
