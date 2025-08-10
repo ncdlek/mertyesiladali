@@ -103,21 +103,141 @@ html {
 .topnav.open .nav-toggle span:nth-child(2) { opacity: 0; }
 .topnav.open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
-/* Subtle line-art backgrounds */
-.about, .videos { position: relative; }
-.about::before, .videos::before {
+/* removed line-art backgrounds from sections */
+
+/* removed overview-section line-art */
+
+/* removed footer line-art */
+
+/* Minimal heading icons (stroke-only) */
+.about h2::before,
+.videos h2::before,
+.overview-section h3::before,
+footer.contact h2::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+    vertical-align: -4px;
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+}
+
+/* Topic-specific icons */
+.about h2::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7' r='3'/%3E%3Cpath d='M5 21c1.2-3.2 3.7-5 7-5s5.8 1.8 7 5'/%3E%3C/g%3E%3C/svg%3E"); /* user */
+}
+
+.overview-section .overview-card:nth-child(1) h3::before { /* Services */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='6.5' cy='12' r='2.5'/%3E%3Ccircle cx='17.5' cy='12' r='2.5'/%3E%3Cpath d='M9 12h6'/%3E%3Cpath d='M3 12h1M20 12h1'/%3E%3C/g%3E%3C/svg%3E"); /* stethoscope-like */
+}
+
+.overview-section .overview-card:nth-child(2) h3::before { /* FAQ */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 9a3 3 0 016 0c0 2-3 2-3 4'/%3E%3Cpath d='M12 17h.01'/%3E%3Crect x='3' y='3' width='18' height='18' rx='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.videos h2::before { /* Videos */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='5' width='14' height='14' rx='2'/%3E%3Cpath d='M17 9l4-2v10l-4-2z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+footer.contact h2::before { /* Contact */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 6h16v12H4z'/%3E%3Cpath d='M4 7l8 6 8-6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Page-specific icons for main titles */
+.content-faq .content-body > h2::before { /* FAQ page main title */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 9a3 3 0 016 0c0 2-3 2-3 4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.content-resume .content-body > h2::before { /* Resume main title */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='3' width='16' height='18' rx='2'/%3E%3Cpath d='M8 7h8M8 11h8M8 15h5'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.content-404 .content-body > h2::before { /* 404 page */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 8v5'/%3E%3Cpath d='M12 16h.01'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Services (Hizmetler) page icons and lines */
+.content-services .content-body { position: relative; }
+.content-services .content-body > h2 {
+    position: relative;
+    padding-left: 34px;
+}
+.content-services .content-body > h2::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Cg fill='none' stroke='%23cfd4da' stroke-width='1' stroke-opacity='0.35'%3E%3Cpath d='M0 300 C150 260 300 340 450 300 520 280 560 260 600 250'/%3E%3Cpath d='M0 200 C120 160 280 220 420 200 500 190 560 170 600 160'/%3E%3Cpath d='M0 100 C180 70 300 130 480 100 540 90 570 80 600 70'/%3E%3C/g%3E%3C/svg%3E");
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px; height: 22px;
     background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 60% auto;
-    opacity: 0.35;
-    pointer-events: none;
+    background-size: contain;
+    opacity: 0.9;
+    /* hide heading icon for Services page */
+    display: none;
 }
-/* keep content above pattern */
-.about > *, .videos > * { position: relative; z-index: 1; }
+.content-services .service-item h3 {
+    position: relative;
+    padding-left: 30px;
+}
+.content-services .service-item h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px; height: 18px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.85;
+    filter: drop-shadow(0 0 0 rgba(0,0,0,0));
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 8a4 4 0 108 0'/%3E%3Cpath d='M9 14v6'/%3E%3Cpath d='M12 14v6'/%3E%3Cpath d='M15 11a3 3 0 116 0v9'/%3E%3Cpath d='M18 20h3'/%3E%3C/g%3E%3C/svg%3E");
+}
+/* Thumbnails in left gutter; text shifted right */
+.content-services .service-item {
+    position: relative;
+    padding-left: 72px; /* shift text a bit right for larger icon */
+}
+.content-services .service-text { display: block; }
+.content-services .service-thumb {
+    width: 56px;
+    height: 56px;
+    border-radius: 6px;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* Hide heading pseudo-icon when a thumbnail exists */
+.content-services .service-item.has-thumb h3 { padding-left: 0; }
+.content-services .service-item.has-thumb h3::before { display: none; }
+
+.content-services .service-text h3 { margin: 0 0 6px; }
+.content-services .service-text p { margin-top: 0; }
+
+@media (max-width: 768px) {
+    .content-services .service-item { padding-left: 0; }
+    .content-services .service-thumb {
+        position: static;
+        transform: none;
+        margin: 0 auto 8px auto; /* center icon above text */
+        width: 48px;
+        height: 48px;
+        border-radius: 5px;
+    }
+}
+/* Subtle top-right line-art inside Services content */
+/* removed services inner line-art */
+
+/* FAQ page: add inner line-art too (icons already exist) */
+.content-faq .content-body { position: relative; }
+/* removed faq inner line-art */
 
 /* Narrow dropdown on large screens */
 @media (min-width: 1024px) {
@@ -153,6 +273,11 @@ html {
     position: relative;
     overflow: hidden;
 }
+
+/* removed header line-art overlay */
+
+/* keep hero content above pattern */
+.hero > * { position: relative; z-index: 1; }
 
 .hero::before {
     content: "";
@@ -449,6 +574,21 @@ html {
     transition: background-color 0.2s ease-out;
 }
 
+/* Space for left icon */
+.faq-item summary { padding-left: 2.2rem; }
+.faq-item summary::before {
+    content: "";
+    position: absolute;
+    left: 0.9rem;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 9a3 3 0 016 0c0 2-3 2-3 4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 18px 18px;
+    background-repeat: no-repeat;
+}
+
 .faq-item summary:hover {
     background-color: #e9ecef;
 }
@@ -551,6 +691,15 @@ footer.contact {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        background-size: 380px auto, 460px auto;
+        background-position: left 0 top -20px, right 0 bottom -10px;
+    }
+
+    .hero::before {
+        background-size: 140% auto;
+        opacity: 0.9;
+    }
     .hero {
         padding: 2rem;
         min-height: auto;
