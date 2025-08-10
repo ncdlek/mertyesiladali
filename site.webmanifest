@@ -1,0 +1,11 @@
+{
+  "name": "Dr. Öğr. Üyesi Mert Yeşiladalı",
+  "short_name": "Mert Yeşiladalı",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#8b7cf5",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
