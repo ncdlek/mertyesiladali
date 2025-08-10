@@ -1,6 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // Hamburger menu toggle
+  const topnav = document.querySelector('.topnav');
+  const toggleBtn = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  if (topnav && toggleBtn) {
+    const closeMenu = () => {
+      topnav.classList.remove('open');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    };
+    const openMenu = () => {
+      topnav.classList.add('open');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+    };
+    toggleBtn.addEventListener('click', () => {
+      const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+      expanded ? closeMenu() : openMenu();
+    });
+    // Close on link click (mobile UX)
+    navLinks.forEach(a => a.addEventListener('click', () => closeMenu()));
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!topnav.classList.contains('open')) return;
+      if (!topnav.contains(e.target)) closeMenu();
+    });
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }
+
   // Ripple effect for all .btn
   function createRipple(target, event) {
     try {

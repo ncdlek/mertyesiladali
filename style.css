@@ -19,6 +19,128 @@ html {
     --bg-hero-3: #8ec9ff;
 }
 
+/* Top Navigation */
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffffcc; /* translucent white */
+    backdrop-filter: saturate(120%) blur(8px);
+    border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.brand {
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 56px;
+    right: 12px;
+    left: 12px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 10px 18px rgba(0,0,0,.06);
+    padding: 10px;
+    display: none; /* hidden by default on all sizes */
+    flex-direction: column;
+    gap: 6px;
+}
+
+.nav-links a {
+    display: block;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: var(--text);
+    text-decoration: none;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.nav-links a:hover { background: #f5f5ff; }
+
+/* Make nav CTAs plain links (no button effect) */
+.nav-cta a { border: none; }
+.nav-cta a:hover { background: transparent; color: var(--text); border-color: transparent; text-decoration: underline; }
+
+.nav-toggle {
+    display: inline-block; /* always show hamburger */
+    width: 40px;
+    height: 34px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+    border-radius: 2px;
+    transition: transform .25s ease, opacity .25s ease;
+}
+
+.topnav.open .nav-links { display: flex; }
+
+/* hamburger to X */
+.topnav.open .nav-toggle span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.topnav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+.topnav.open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+/* Subtle line-art backgrounds */
+.about, .videos { position: relative; }
+.about::before, .videos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Cg fill='none' stroke='%23cfd4da' stroke-width='1' stroke-opacity='0.35'%3E%3Cpath d='M0 300 C150 260 300 340 450 300 520 280 560 260 600 250'/%3E%3Cpath d='M0 200 C120 160 280 220 420 200 500 190 560 170 600 160'/%3E%3Cpath d='M0 100 C180 70 300 130 480 100 540 90 570 80 600 70'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 60% auto;
+    opacity: 0.35;
+    pointer-events: none;
+}
+/* keep content above pattern */
+.about > *, .videos > * { position: relative; z-index: 1; }
+
+/* Narrow dropdown on large screens */
+@media (min-width: 1024px) {
+    .nav-links {
+        left: auto;           /* don't span full width */
+        width: 320px;         /* narrow panel */
+    }
+}
+
+/* Remove hover/anim for selected buttons */
+.btn.no-anim, .btn.no-anim:hover {
+    box-shadow: none !important;
+    transform: none !important;
+    transition: none !important;
+}
+.btn.no-anim.btn-secondary:hover {
+    background-color: transparent !important;
+    color: var(--brand) !important;
+}
+.btn.no-anim.btn-primary:hover {
+    background-color: #6a4bc4 !important;
+    color: #fff !important;
+}
 /* Updated Hero/Header Section */
 .hero {
     /* Animated gradient background */
