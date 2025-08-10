@@ -192,20 +192,27 @@ html {
     text-decoration: none;
 }
 
-/* About, Videos, Contact Sections */
-.about,
-.videos,
-.contact {
+/* About Section */
+.about {
     padding: 40px;
     max-width: 900px;
-    margin: auto;
+    margin: 40px auto;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Videos Section (standard block layout) */
+.videos {
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
     text-align: center;
 }
 
-/* Subtle reveal on load */
 .about,
 .videos,
-.contact,
 .content-body {
     animation: fadeInUp 0.6s ease 0.05s both;
 }
@@ -235,6 +242,17 @@ html {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
+}
+
+.contact {
+    background: #f4f4f4; /* Match footer background for a distinct band */
+    padding: 0; /* background spans edge-to-edge; inner container handles spacing */
+    margin-top: 0; /* flush with previous section */
+}
+
+/* Remove gap between contact and footer when adjacent */
+.contact + footer {
+    margin-top: 0;
 }
 
 .contact a {
@@ -357,6 +375,19 @@ footer {
     line-height: 1.5;
 }
 
+/* Make contact footer band edge-to-edge and stuck to previous section */
+footer.contact {
+    padding: 0;       /* no side padding */
+    margin-top: 0;    /* no gap above */
+}
+
+/* Inner container for footer content */
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px; /* content spacing while background remains full-width */
+}
+
 /* Animations */
 @keyframes gradientShift {
     0% { transform: translate3d(-2%, -2%, 0) scale(1.02); }
@@ -454,7 +485,7 @@ footer {
         padding: 15px;
     }
 
-    .hero, .about, .videos, .contact {
+    .hero, .about, .videos {
         padding: 20px;
     }
 }
