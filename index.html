@@ -46,9 +46,32 @@
                 <a href="index.html" class="brand" aria-label="Ana sayfa">
                     Dr. Mert Yeşiladalı
                 </a>
-                <button class="nav-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
+                <div class="nav-actions">
+                    <div class="language-selector">
+                        <button class="language-btn" aria-expanded="false" aria-haspopup="true" aria-label="Dil seçenekleri">
+                            <i class="fa-solid fa-language"></i>
+                            <span class="current-lang">TR</span>
+                            <i class="fa-solid fa-chevron-down" style="font-size: 0.8em;"></i>
+                        </button>
+                        <div class="language-dropdown">
+                            <div class="language-option active" data-lang="tr">
+                                <span>🇹🇷 Türkçe</span>
+                            </div>
+                            <div class="language-option" data-lang="en">
+                                <span>🇬🇧 English</span>
+                            </div>
+                            <div class="language-option" data-lang="ru">
+                                <span>🇷🇺 Русский</span>
+                            </div>
+                            <div class="language-option" data-lang="ar">
+                                <span>🇸🇦 العربية</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="nav-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
                 <ul class="nav-links">
                     <li><a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
                     <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Hizmetler</a></li>

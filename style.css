@@ -73,6 +73,111 @@ html {
 
 .nav-links a:hover { background: #f5f5ff; }
 
+/* Nav Actions Container */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.language-btn {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: background 0.2s ease;
+}
+
+.language-btn:hover {
+    background: #f5f5ff;
+}
+
+.language-btn i {
+    font-size: 1.1em;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-width: 140px;
+    z-index: 1000;
+    display: none;
+    overflow: hidden;
+}
+
+.language-dropdown.show {
+    display: block;
+}
+
+.language-option {
+    padding: 10px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    transition: background 0.2s ease;
+}
+
+.language-option:hover {
+    background: #f8f9fa;
+}
+
+.language-option.active {
+    background: #f0f2ff;
+    color: var(--brand);
+    font-weight: 500;
+}
+
+/* Adjust nav-links for mobile */
+@media (max-width: 768px) {
+    .nav-actions {
+        margin-left: auto;
+    }
+    
+    .language-selector {
+        margin-top: 0;
+        margin-right: 0;
+    }
+    
+    .language-btn {
+        padding: 8px 10px;
+    }
+    
+    .language-dropdown {
+        position: absolute;
+        right: 16px;
+        top: 100%;
+        margin-top: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .topnav.open .language-dropdown {
+        position: static;
+        margin-top: 8px;
+        box-shadow: none;
+        border: 1px solid #eee;
+    }
+}
+
 /* Make nav CTAs plain links (no button effect) */
 .nav-cta a { border: none; }
 .nav-cta a:hover { background: transparent; color: var(--text); border-color: transparent; text-decoration: underline; }
