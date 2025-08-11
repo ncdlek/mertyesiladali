@@ -127,21 +127,22 @@ html {
     cursor: pointer;
 }
 
-.nav-toggle span {
-    display: block;
-    height: 3px;
-    background: #333;
-    margin: 6px 0;
-    border-radius: 2px;
-    transition: transform .25s ease, opacity .25s ease;
+.nav-toggle i {
+    font-size: 24px; /* Adjust size as needed */
+    color: #333; /* Match existing color */
+    line-height: 1; /* Ensure proper vertical alignment */
+    display: flex; /* Use flexbox to center the icon */
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Make icon take full width of button */
+    height: 100%; /* Make icon take full height of button */
 }
+
+
 
 .topnav.open .nav-links { display: flex; }
 
-/* hamburger to X */
-.topnav.open .nav-toggle span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-.topnav.open .nav-toggle span:nth-child(2) { opacity: 0; }
-.topnav.open .nav-toggle span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
 
 /* removed line-art backgrounds from sections */
 
@@ -1236,6 +1237,10 @@ footer {
 
     .hero, .about, .videos {
         padding: 20px;
+    }
+
+    body {
+        padding-top: 50px; /* Adjust this value based on the actual height of the topnav on mobile */
     }
 }
 

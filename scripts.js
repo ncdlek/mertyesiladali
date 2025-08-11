@@ -29,10 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const closeMenu = () => {
         topnav.classList.remove('open');
         toggleBtn.setAttribute('aria-expanded', 'false');
+        const icon = toggleBtn.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
       };
       const openMenu = () => {
         topnav.classList.add('open');
         toggleBtn.setAttribute('aria-expanded', 'true');
+        const icon = toggleBtn.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        }
       };
       toggleBtn.addEventListener('click', () => {
         const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
