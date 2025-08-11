@@ -178,6 +178,43 @@ html {
     }
 }
 
+/* Google Translate Widget Styles */
+.goog-te-gadget {
+    font-family: 'Poppins', sans-serif !important;
+    color: transparent !important;
+}
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+.goog-te-menu2 {
+    max-width: 100% !important;
+    width: auto !important;
+}
+
+.goog-te-menu2-item div, .goog-te-menu2-item:link div {
+    color: #333 !important;
+    font-family: 'Poppins', sans-serif !important;
+    padding: 8px 16px !important;
+}
+
+.goog-te-menu2-item:hover div {
+    background-color: #f5f5ff !important;
+}
+
+.goog-te-menu2-item-selected div {
+    background-color: #f0f2ff !important;
+    color: #8b7cf5 !important;
+}
+
+/* Hide Google Translate attribution */
+.goog-logo-link, .goog-te-gadget span[style*="8e7"] {
+    display: none !important;
+}
+
 /* Make nav CTAs plain links (no button effect) */
 .nav-cta a { border: none; }
 .nav-cta a:hover { background: transparent; color: var(--text); border-color: transparent; text-decoration: underline; }
