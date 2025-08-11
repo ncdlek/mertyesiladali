@@ -793,7 +793,7 @@ footer.contact h2::before { /* Contact */
     background: #f8f9ff;
     transition: all 0.3s ease;
     position: relative;
-    padding-left: 3rem;
+    padding-left: 1.5rem;
 }
 
 .faq-summary-text {
@@ -805,16 +805,7 @@ footer.contact h2::before { /* Contact */
 }
 
 .faq-summary::before {
-    content: "";
-    position: absolute;
-    left: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cg fill='none' stroke='%238b7cf5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 9a3 3 0 116 0c0 2-3 3-3 4'/%3E%3Cpath d='M12 17h.01'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
+    display: none; /* Hide the question mark icon */
 }
 
 .faq-summary::after {
@@ -1024,6 +1015,23 @@ footer.contact {
     body {
         background-size: 380px auto, 460px auto;
         background-position: left 0 top -20px, right 0 bottom -10px;
+    }
+    
+    .faq-content {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 1.25rem;
+    }
+    
+    .faq-content .faq-image-placeholder {
+        width: 100%;
+        height: 180px;
+        margin-bottom: 1rem;
+        order: -1; /* Move image to top */
+    }
+    
+    .faq-text {
+        width: 100%;
     }
     
     .videos {
