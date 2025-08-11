@@ -46,32 +46,9 @@
                 <a href="index.html" class="brand" aria-label="Ana sayfa">
                     Dr. Mert Yeşiladalı
                 </a>
-                <div class="nav-actions">
-                    <div class="language-selector">
-                        <button class="language-btn" aria-expanded="false" aria-haspopup="true" aria-label="Dil seçenekleri">
-                            <i class="fa-solid fa-language"></i>
-                            <span class="current-lang">TR</span>
-                            <i class="fa-solid fa-chevron-down" style="font-size: 0.8em;"></i>
-                        </button>
-                        <div class="language-dropdown">
-                            <div class="language-option active" data-lang="tr">
-                                <span>🇹🇷 Türkçe</span>
-                            </div>
-                            <div class="language-option" data-lang="en">
-                                <span>🇬🇧 English</span>
-                            </div>
-                            <div class="language-option" data-lang="ru">
-                                <span>🇷🇺 Русский</span>
-                            </div>
-                            <div class="language-option" data-lang="ar">
-                                <span>🇸🇦 العربية</span>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="nav-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
-                        <span></span><span></span><span></span>
-                    </button>
-                </div>
+                <button class="nav-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
                 <ul class="nav-links">
                     <li><a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
                     <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Hizmetler</a></li>
@@ -103,69 +80,7 @@
             </div>
         </header>
 
-        <!-- Google Translate Element -->
-        <div id="google_translate_element" style="display: none"></div>
-        <script>
-            // Google Translate integration for GitHub Pages
-            function googleTranslateElementInit() {
-                new google.translate.TranslateElement({
-                    pageLanguage: 'tr',
-                    includedLanguages: 'en,ru,ar',
-                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                    autoDisplay: false
-                }, 'google_translate_element');
-                
-                // Show the widget after initialization
-                document.getElementById('google_translate_element').style.display = 'block';
-            }
-            
-            // Function to change language programmatically
-            function doTranslate(lang) {
-                if (!window.google || !google.translate) {
-                    // If Google Translate script isn't loaded yet, load it
-                    const script = document.createElement('script');
-                    script.type = 'text/javascript';
-                    script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-                    document.body.appendChild(script);
-                    
-                    // Store the language to set after loading
-                    window.initialLanguage = lang;
-                    
-                    // Add a one-time listener for when the script loads
-                    script.onload = function() {
-                        if (window.initialLanguage) {
-                            // Small delay to ensure the Google Translate widget is fully initialized
-                            setTimeout(() => selectLang(window.initialLanguage), 1000);
-                        }
-                    };
-                } else {
-                    // If already loaded, just select the language
-                    selectLang(lang);
-                }
-            }
-            
-            function selectLang(lang) {
-                const select = document.querySelector('.goog-te-combo');
-                if (select) {
-                    // Only trigger change if the language is different
-                    if (select.value !== lang) {
-                        select.value = lang;
-                        // Create and dispatch the change event
-                        const event = new Event('change');
-                        select.dispatchEvent(event);
-                    }
-                } else if (window.google && google.translate) {
-                    // If the select element isn't available yet, try again shortly
-                    setTimeout(() => selectLang(lang), 100);
-                }
-            }
-            
-            // Add a class to the body when translation is in progress
-            document.addEventListener('DOMContentLoaded', function() {
-                // This helps with styling during translation
-                document.body.classList.add('notranslate');
-            });
-        </script>
+
 
         <section class="about reveal">
             <div>
