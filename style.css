@@ -1195,3 +1195,49 @@ footer.contact {
     text-align: center;
     margin-top: 10vh;
 }
+
+/* Resume Page Specific Styles */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resume-card {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.resume-card h3 {
+    margin-top: 0;
+    color: #333;
+    border-bottom: 2px solid #e9ecff;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.resume-card ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.resume-card ul li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.resume-card ul li i {
+    margin-right: 1rem;
+    color: var(--brand);
+    margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+    }
+}
