@@ -851,11 +851,14 @@ footer.contact h2::before { /* Contact */
     margin-left: auto;
 }
 
-.faq-content .faq-image-placeholder {
+.faq-content .faq-image {
     width: 220px;
     height: 140px;
     margin: 0;
     flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .faq-text {
@@ -1023,9 +1026,9 @@ footer.contact {
         padding: 1.25rem;
     }
     
-    .faq-content .faq-image-placeholder {
+    .faq-content .faq-image {
         width: 100%;
-        height: 180px;
+        height: 200px;
         margin-bottom: 1rem;
         order: -1; /* Move image to top */
     }
