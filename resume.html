@@ -17,44 +17,8 @@
         <script src="scripts.js" defer></script>
     </head>
     <body class="content-resume">
-        <nav class="topnav">
-            <div class="nav-container">
-                <a href="index.html" class="brand" aria-label="Ana sayfa">
-                    Dr. Mert Yeşiladalı
-                </a>
-                <button class="nav-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html"><i class="fa-solid fa-house"></i> Ana Sayfa</a></li>
-                    <li><a href="services.html"><i class="fa-solid fa-stethoscope"></i> Hizmetler</a></li>
-                    <li><a href="resume.html"><i class="fa-solid fa-file-lines"></i> Özgeçmiş</a></li>
-                    <li><a href="faq.html"><i class="fa-solid fa-circle-question"></i> SSS</a></li>
-                    <li><a href="https://yeditepehastaneleri.com/videolar/mert-yesiladali-videolari" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-video"></i> Tüm Videolar</a></li>
-                    <li class="nav-cta"><a href="index.html#contact-section"><i class="fa-solid fa-envelope"></i> İletişim</a></li>
-                    <li class="nav-cta"><a href="https://yeditepehastaneleri.com/doktorlar/mert-yesiladali" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-calendar-check"></i> Randevu</a></li>
-                </ul>
-            </div>
-        </nav>
-        <header class="hero">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <a href="index.html" class="header-title-link">
-                        <h1>Dr. Öğr. Üyesi Mert Yeşiladalı</h1>
-                    </a>
-                    <p>Üreme Tıbbı, Tüp Bebek ve Kadın Sağlığı Uzmanı</p>
-                    <div class="hero-buttons">
-                        <a href="https://yeditepehastaneleri.com/doktorlar/mert-yesiladali" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Randevu Al</a>
-                        <a href="index.html#contact-section" class="btn btn-secondary">İletişim</a>
-                    </div>
-                </div>
-                <img
-                    src="images/doctor-photo.jpg"
-                    alt="Dr. Mert Yeşiladalı"
-                    class="hero-doctor-photo"
-                />
-            </div>
-        </header>
+        <div data-include="components/nav.html"></div>
+        <div data-include="components/hero.html"></div>
 
         <section class="content-body">
             <h2>Doktorun Özgeçmişi</h2>
@@ -84,11 +48,6 @@
 
         </section>
 
-        <footer>
-            <p class="footer-disclaimer">
-                Bu sitede yer alan bilgiler, yalnızca bilgilendirme amaçlıdır ve herhangi bir tanı veya tedavi önerisi niteliği taşımaz. Sağlık sorunlarınız için lütfen doktorunuza danışınız.
-            </p>
-            <p>&copy; 2024 Dr. Mert Yeşiladalı. Tüm hakları saklıdır.</p>
-        </footer>
+        <div data-include="components/footer.html"></div>
     </body>
 </html>
